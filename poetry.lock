@@ -855,7 +855,7 @@ files = [
 
 [[package]]
 name = "wheel"
-version = "0.40.0"
+version = "0.46.2"
 description = "A built-package format for Python"
 optional = false
 python-versions = ">=3.7"
