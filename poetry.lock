@@ -869,7 +869,7 @@ test = ["pytest (>=6.0.0)"]
 
 [[package]]
 name = "zipp"
-version = "3.15.0"
+version = "3.19.1"
 description = "Backport of pathlib-compatible object wrapper for zip files"
 optional = false
 python-versions = ">=3.7"
