@@ -210,7 +210,8 @@ int sd_cmd9(struct sd_handle *handle, struct sd_card_data *card)
 		multiFactor = (1 << (card->csd.mmc.devSizeMulti + 2));
 
 		handle->card->size =
-		    iBlkNum * multiFactor * (1 << card->csd.mmc.rdBlkLen);
+		    ((uint64_t)iBlkNum) * ((uint64_t)multiFactor) *
+		    (1ULL << card->csd.mmc.rdBlkLen);
 	}
 
 	handle->card->maxRdBlkLen = maxReadBlockLen;
