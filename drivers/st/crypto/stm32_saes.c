@@ -207,7 +207,7 @@ static void saes_write_key(struct stm32_saes_context *ctx)
 {
 	/* Restore the _SAES_KEYRx if SOFTWARE key */
 	if ((ctx->cr & _SAES_CR_KEYSEL_MASK) == (_SAES_CR_KEYSEL_SOFT << _SAES_CR_KEYSEL_SHIFT)) {
-		uint8_t i;
+		size_t i;
 		uint32_t ks;
 
 		ks = saes_get_keysize(ctx);
