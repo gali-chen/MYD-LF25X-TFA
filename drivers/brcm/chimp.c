@@ -300,7 +300,7 @@ static int bcm_chimp_find_fw_in_spi(uintptr_t *addr, size_t *size)
 	/* Locate the firmware */
 	for (i = 0; i < dir_block_hdr->entries; i++) {
 		*addr = ((uintptr_t)dir_block_hdr + dir_block_hdr->length +
-			i * dir_block_hdr->entry_length);
+			((uintptr_t)i * dir_block_hdr->entry_length));
 		dir_entry = (bnxnvm_directory_entry_t *)(*addr);
 		if ((dir_entry->type == BNX_DIR_TYPE_BOOTCODE) ||
 				(dir_entry->type == BNX_DIR_TYPE_BOOTCODE_2)) {
