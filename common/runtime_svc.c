@@ -90,7 +90,8 @@ static int32_t validate_rt_svc_desc(const rt_svc_desc_t *desc)
 void __init runtime_svc_init(void)
 {
 	int rc = 0;
-	uint8_t index, start_idx, end_idx;
+	size_t index;
+	uint8_t start_idx, end_idx;
 	rt_svc_desc_t *rt_svc_descs;
 
 	/* Assert the number of descriptors detected are less than maximum indices */
@@ -149,6 +150,6 @@ void __init runtime_svc_init(void)
 		assert(start_idx <= end_idx);
 		assert(end_idx < MAX_RT_SVCS);
 		for (; start_idx <= end_idx; start_idx++)
-			rt_svc_descs_indices[start_idx] = index;
+			rt_svc_descs_indices[start_idx] = (uint8_t)index;
 	}
 }
