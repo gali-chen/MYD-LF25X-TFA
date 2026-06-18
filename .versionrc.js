@@ -92,7 +92,7 @@ module.exports = {
                 "writeVersion": function (contents, version) {
                     const _ver = 'version = "' + version + '"'
 
-                    return contents.replace(/^(version\s=\s")((\d).?)*$/m, _ver)
+                    return contents.replace(/^(version\s=\s")\d+\.\d+\.\d+"$/m, _ver)
                 }
             },
         },
@@ -113,8 +113,8 @@ module.exports = {
                     const _ver = 'version = "' + version + '"'
                     const _rel = 'release = "' + version + '"'
 
-                    contents = contents.replace(/^(version\s=\s")((\d).?)*$/m, _ver)
-                    contents = contents.replace(/^(release\s=\s")((\d).?)*$/m, _rel)
+                    contents = contents.replace(/^(version\s=\s")\d+\.\d+\.\d+"$/m, _ver)
+                    contents = contents.replace(/^(release\s=\s")\d+\.\d+\.\d+"$/m, _rel)
                     return contents
                 }
             },
