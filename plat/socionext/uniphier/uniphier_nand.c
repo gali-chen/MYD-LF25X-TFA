@@ -202,7 +202,7 @@ static size_t __uniphier_nand_read(struct uniphier_nand *nand, int lba,
 
 		block++;
 		page = 0;
-		p += page_size * page_count;
+		p += (uintptr_t)page_size * (uintptr_t)page_count;
 		pages_to_read -= page_count;
 	}
 
