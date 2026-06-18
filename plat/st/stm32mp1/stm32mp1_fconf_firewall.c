@@ -55,7 +55,7 @@ void stm32mp1_arch_security_setup(void)
 
 void stm32mp1_security_setup(void)
 {
-	uint8_t i;
+	uint32_t i;
 
 	/* DDR content will be restored, do not change the firewall protection */
 	if (stm32mp1_ddr_is_restored()) {
