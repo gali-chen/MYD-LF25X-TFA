@@ -20,6 +20,7 @@ requests = {version = "^2.33.0", python = ">=3.10"}
 idna = {version = "^3.15", python = ">=3.10"}
 Pygments = {version = "^2.20.0", python = ">=3.9"}
 pip = {version = "^26.1.2", python = ">=3.10"}
+wheel = {version = "^0.46.2", python = ">=3.9"}
 
 [tool.poetry.group.doc.dependencies]
 sphinx = "^5.3.0"
